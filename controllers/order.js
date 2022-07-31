@@ -17,7 +17,7 @@ exports.takeOrder = async (req, res) => {
         const order = await Order.findOne({origin})
         return res.status(StatusCodes.OK).json({status : success, order})
     } catch (error) {
-        return res.status(StatusCodes.BAD_REQUEST).json({error : 'Order has been taken!'})
+        return res.status(StatusCodes.BAD_REQUEST).json({error : 'Taken!'})
     }
 }
 
